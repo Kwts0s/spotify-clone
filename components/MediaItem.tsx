@@ -42,7 +42,7 @@ const MediaItem: React.FC<MediaItemProps> = ({
           min-w-[48px]
           overflow-hidden
       ">
-        i
+        
         <Image 
         fill 
         src={imageUrl ||'/images/liked.png'} 

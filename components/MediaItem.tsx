@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import useLoadImage from "@/hooks/useLoadImage";
 import { Song } from "@/types";
@@ -40,15 +40,27 @@ const MediaItem: React.FC<MediaItemProps> = ({
           rounded-md
           min-h-[48px}
           min-w-[48px]
-          overflow-hidden
-      ">
+          overflow-hidden">
         
-        <Image 
-        fill 
-        src={imageUrl ||'/images/liked.png'} 
-        alt="" 
+        <img
+        src={imageUrl || '/images/liked.png'} 
+        style={{maxWidth:3+"em",aspectRatio:1/1}}
+        alt="MediaItem" 
         className="object-cover"/>
 
+      </div>
+      <div className="
+      flex
+      flex-col
+      gap-y-1
+      overflow-hidden
+      ">
+        <p className="text-white truncate">
+          {data.title}
+        </p>
+        <p className="text-neutral-400 text-sm truncate">
+          {data.author}
+        </p>
       </div>
             
     </div>
